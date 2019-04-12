@@ -1,0 +1,13 @@
+Vaststellingen:
+- Onze namen zijn veel langer dan de namen van de tools van google
+- Veel inhoud -> kolommen + scrollen
+- Contact onderdaan ziet er goed uit
+
+Uitdagingen:
+- Consistente layout, die past op elk van onze sites
+- Tools (Sites? Menu? - technisch) <-> Thema's (inhoudelijk)
+- Navigatie .be <-> Navigatie over alle sites heen
+- Op welke basis kiezen we voor navigatie-lagen?
+- Is dit te veel inhoud, dus enkel zoeken?
+  -> Gaat niet als je de naam niet kent van wat je zoekt
+- Waar leggen we de grens voor een tool? Bvb. nieuws of kaarten

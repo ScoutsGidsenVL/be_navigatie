@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .popup {
+        display: none;
+      }
+      h4 {
+        display: inline-block;
+      }
+      input:checked + .popup {
+        display: block;
+      }
+      .item {
+        padding: 5px;
+      }
+      .item img {
+        width: 32px;
+        height: 32px;
+        padding-right: 10px;
+        vertical-align: middle;
+      }
+      a {
+        color: #748d26;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      iframe {
+        width: 100%;
+        height: calc(100% + 70px);
+        position: absolute;
+        left: 0;
+        top: -70px;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body style="text-align: center;">
+    <div style="position: absolute; left: 2rem; right: 2rem; top: 0; text-align: right;">
+      <div style="display: inline-block; color: white; -moz-user-select: none;">
+        <span style="display: inline-block; padding: 5px; background-color: #246b8c; ">
+          <h4>&#x1f464; Aanmelden</h4>
+        </span>
+        <label for="checkbox" style="display: inline-block; padding: 5px; background-color: #246b8c; ">
+          <h4>&#10303; Tools</h4>
+        </label>
+      </div>
+      <input type="checkbox" id="checkbox" style="display: none;"/>
+      <div class="popup" style="background-color: white; text-align: left;">
+        <div class="zoek" style="padding: 20px;">
+          <input type="search" placeholder="Zoek" style="width: calc(100% - 2rem);">
+          &#x1F50D;
+        </div>
+        <!--div class="items" style="padding: 0 20px 20px; column-width: 281px;"-->
+        <div class="items" style="padding: 0 20px 20px; max-height: calc(100vh - 230px); overflow-y: scroll;">
+        </div>
+        <div style="padding: 20px; background-color: #bdd732; border-bottom: 2px solid #748d26;">
+          <a href="#">Contacteer ons</a>
+          <a href="#" style="vertical-align: middle; display: inline-block; height: 15px; background-image: url(https://www.scoutsengidsenvlaanderen.be/files/algemeen/menubalk/balk_sprite_fb.png); background-position: 0 -15px;">&nbsp; &nbsp;</a> <a href="#" style="vertical-align: middle; display: inline-block; height: 15px; background-image: url(https://www.scoutsengidsenvlaanderen.be/files/algemeen/menubalk/balk_sprite_twitter.png); background-position: 0 -15px;">&nbsp; &nbsp;</a> <a href="#" style="vertical-align: middle; display: inline-block; height: 15px; background-image: url(https://www.scoutsengidsenvlaanderen.be/files/algemeen/menubalk/balk_sprite_instagram.png); background-position: 0 -15px;">&nbsp; &nbsp;</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      var sites = [
+        {naam: "Scouts en Gidsen Vlaanderen", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Groepsadmin", link: "#", logo: "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/img/favicons/favicon-32x32.png"},
+        {naam: "Hopper winkel", link: "#", logo: "https://www.hopper.be/sites/all/themes/zen/hopper/favicon.ico"},
+        {naam: "Hopper jeugdverblijven", link: "#", logo: "https://www.hopper.be/sites/all/themes/zen/hopper/favicon.ico"},
+        {naam: "Evenementen", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: ".Org", link: "#", logo: "https://www.scoutsengidsenvlaanderen.org/plugins/gui.ajax/res/themes/orbit/images/favicon.ico"},
+        {naam: "Vacatures", link: "#", logo: "https://www.scoutsengidsenvlaanderen.org/plugins/gui.ajax/res/themes/orbit/images/favicon.ico"},
+        {naam: "Kampregistraties", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Materialendatabank", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Werkwinkeldatabank", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Groepenzoeker", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Totemzoeker", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Spelendatabank", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+        {naam: "Verzekeringen", link: "#", logo: "https://static.scoutsengidsenvlaanderen.be/images/favicons/favicon-96x96.png"},
+      ];
+      var items = document.querySelector('.items');
+      for (var site of sites) {
+        console.log(site);
+        items.innerHTML += '<div class="item"><a href="' + site.link + '"><img src="' + site.logo + '"><span>' + site.naam + '</span></a></div>';
+      }
+    </script>
+    <iframe src="https://www.scoutsengidsenvlaanderen.be" height="640" frameBorder="0" scrolling="no">
+    </iframe>
+  </body>
+</html>
